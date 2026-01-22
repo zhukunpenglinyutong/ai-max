@@ -26,6 +26,9 @@ export async function interactiveMode() {
     case 'uninstall':
       await runUninstall();
       break;
+    case 'docs':
+      await runDocs();
+      break;
     case 'exit':
       console.log(chalk.gray('再见！'));
       break;
@@ -117,4 +120,34 @@ export async function runUninstall(options = {}) {
 
   const components = installedVersion.components || Object.keys(COMPONENTS);
   await uninstall(components);
+}
+
+/**
+ * 打开使用文档
+ */
+export async function runDocs() {
+  const url = 'https://github.com/zhukunpenglinyutong/ai-max';
+  console.log('');
+  console.log(chalk.cyan('正在打开文档...'));
+  console.log(chalk.gray(`  ${url}`));
+  console.log('');
+
+  // 跨平台打开浏览器
+  const { exec } = await import('child_process');
+  const platform = process.platform;
+  let command;
+
+  if (platform === 'darwin') {
+    command = `open "${url}"`;
+  } else if (platform === 'win32') {
+    command = `start "" "${url}"`;
+  } else {
+    command = `xdg-open "${url}"`;
+  }
+
+  exec(command, (error) => {
+    if (error) {
+      console.log(chalk.yellow('无法自动打开浏览器，请手动访问上述链接。'));
+    }
+  });
 }

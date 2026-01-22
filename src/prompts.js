@@ -90,6 +90,7 @@ export async function promptMainMenu() {
     { name: '更新 AI MAX', value: 'update', disabled: !installedVersion ? '（未安装）' : false },
     { name: '卸载 AI MAX', value: 'uninstall', disabled: !installedVersion ? '（未安装）' : false },
     new inquirer.Separator(),
+    { name: '查看文档', value: 'docs' },
     { name: '退出', value: 'exit' }
   ];
 

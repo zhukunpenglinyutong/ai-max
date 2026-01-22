@@ -1,5 +1,7 @@
 # AI MAX
 
+> 声明：本项目经AI编辑，非原创，不过都是我本人正在使用的，非佬勿6，还会持续迭代
+
 **Claude Code 增强配置，开箱即用。**
 
 本仓库包含生产级 agents（代理）、skills（技能）、hooks（钩子）、commands（命令）、rules（规则）和 MCP 配置，帮助你快速提升 Claude Code 的使用体验。
@@ -17,6 +19,7 @@ aimax                    # 交互式安装
 aimax install --all      # 安装全部组件
 aimax update             # 更新到最新版本
 aimax uninstall          # 卸载
+aimax docs               # 打开使用文档
 ```
 
 或者使用 npx 临时运行（无需安装）：

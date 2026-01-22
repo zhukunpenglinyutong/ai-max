@@ -1,6 +1,6 @@
 {
   "name": "aimax",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "AI MAX - Claude Code 能力增强，开箱即用",
   "main": "src/index.js",
   "bin": {
@@ -9,9 +9,7 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "build:web": "cd web && npm install && npm run build",
-    "prepublishOnly": "npm run build:web"
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [
     "claude",
@@ -22,16 +20,15 @@
     "workflow",
     "productivity"
   ],
-  "author": "",
+  "author": "zhukunpenglinyutong",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhukunpenglinyutong/aimax"
+    "url": "https://github.com/zhukunpenglinyutong/ai-max"
   },
   "files": [
     "bin",
     "src",
-    "web/dist",
     "agents",
     "rules",
     "commands",
