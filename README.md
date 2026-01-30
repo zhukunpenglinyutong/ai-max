@@ -14,21 +14,13 @@
 # 全局安装
 npm install -g aimax
 
-# 然后直接使用
-aimax                    # 交互式安装
-aimax install            # 安装全部组件
-aimax install -y         # 跳过确认直接安装
-aimax update             # 更新到最新版本
-aimax uninstall          # 卸载
-aimax docs               # 打开使用文档
-aimax -v                 # 查看版本号
+# 增强claude code
+aimax                    # 终端执行aimax，进行交互式安装
+
+# Claude Code 使用
+/aimax:auto 你的问题      # 自动选择最优的aimax指令
 ```
 
-或者使用 npx 临时运行（无需安装）：
-```bash
-npx aimax
-npx aimax install
-```
 
 CLI 提供交互式界面，让你选择要安装的组件：
 - **Agents** - 专用子代理（planner, architect, tdd-guide 等）
